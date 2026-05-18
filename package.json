@@ -9,6 +9,7 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "git config core.hooksPath .githooks 2>/dev/null && git lfs install 2>/dev/null || true",
     "build": "pnpm -r --if-present run build",
+    "test": "node --test tests/tooling/*.test.mjs",
     "lint": "pnpm --filter landing run lint && pnpm --filter @project/ui run lint",
     "lint:css": "stylelint 'apps/landing/src/**/*.css' 'packages/**/*.css'",
     "spell": "cspell '**/*.{ts,tsx,mts,js,mjs,json,md}'",
