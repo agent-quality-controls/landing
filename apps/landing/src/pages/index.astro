@@ -1,0 +1,16 @@
+---
+import { getHomepage } from "../content/landing-pages";
+import { buildHomepageJsonLd } from "../seo/json-ld";
+import { buildHomepageMetadata } from "../seo/metadata";
+import BaseLayout from "../ui/BaseLayout.astro";
+import { LandingHomepage } from "../ui/landing/homepage-v2";
+
+const homepage = await getHomepage();
+const siteUrl = new URL(Astro.site ?? Astro.url.origin);
+const metadata = buildHomepageMetadata(homepage, siteUrl, Astro.url);
+const jsonLd = buildHomepageJsonLd(homepage, siteUrl);
+---
+
+<BaseLayout metadata={metadata} jsonLd={jsonLd}>
+  <LandingHomepage content={homepage} currentPath={Astro.url.pathname} />
+</BaseLayout>

@@ -1,0 +1,227 @@
+{
+  "page": "manifesto",
+  "metadata": {
+    "title": "The manifesto - agent-qc.com",
+    "description": "Why we build deterministic, code-based quality controls for AI agents - and why an agent watching another agent isn't enough."
+  },
+  "brandName": "agent-qc.com",
+  "githubUrl": "https://github.com/agent-quality-controls",
+  "githubLabel": "github",
+  "navLinks": [
+    {
+      "href": "/",
+      "label": "home"
+    },
+    {
+      "href": "/manifesto/",
+      "label": "manifesto"
+    }
+  ],
+  "label": "manifesto",
+  "meta": "2026 - 6 min read",
+  "title": "Gates, not",
+  "accent": "graders",
+  "lede": "Why we build deterministic, code-based quality controls for AI agents - and why an agent watching another agent isn't enough.",
+  "authorName": "agent-quality-controls",
+  "authorMeta": "maintainers - published may 2026",
+  "blocks": [
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Agents produce a lot of content very quickly. Code, prose, configs, tests, migrations, schemas, READMEs. Most of it solves a real problem. Some of it doesn't. The ratio matters less than the rate.",
+        "The rate is the point. Agents ship faster than humans can read carefully. That gap doesn't close with practice. It widens with every model release."
+      ]
+    },
+    {
+      "type": "pullquote",
+      "body": "Errors don't disappear in an agent codebase - they pile up faster than anyone notices."
+    },
+    {
+      "type": "heading",
+      "index": "01",
+      "title": "The graders are the same agents."
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "The first instinct is to point another agent at the output. A reviewer agent. A judge agent. A swarm of critic agents voting. We've all built these. They help. They are not enough.",
+        "A reviewing agent inherits the same blind spots as the agent it reviews. It writes the same kind of prose. It misses the same kind of bug. It argues the same kind of architectural shortcut. It uses the same hedge words.",
+        "Context limits make it worse. On a 200-file codebase the reviewer can't see what it can't load. On a 50-page document the reviewer summarises in self-flattering bullets. The bigger the artefact, the more the reviewer guesses. The bigger the artefact is exactly when you needed the review most."
+      ]
+    },
+    {
+      "type": "heading",
+      "index": "02",
+      "title": "Deterministic gates do the job agents can't."
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "We use code-based quality controls wherever we can. A check is a function. It takes the artefact, applies a rule, returns a verdict. Pass or fail. File and line. Same input, same output, every time.",
+        "This isn't smarter than an agent. It doesn't need to be. It's a different kind of tool with three properties an agent doesn't have."
+      ]
+    },
+    {
+      "type": "proofs",
+      "items": [
+        {
+          "label": "can't be circumvented",
+          "body": "A rule is code. The agent can't flatter it, can't argue with it, can't convince it the situation is special. The gate is the contract."
+        },
+        {
+          "label": "scales infinitely",
+          "body": "Ten lines or ten million. The rule runs at the same speed, at the same cost, with the same verdict shape. No context window, no rate limit."
+        },
+        {
+          "label": "context-independent",
+          "body": "Determinism doesn't care what's elsewhere in the codebase. The check looks at what it's pointed at. The size of the repo doesn't change the answer."
+        }
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "None of this is novel. Linters, type checkers, dependency graphs, approval tests, architecture rules - we've had these tools for decades. The novelty is that we now need them more, not less. The codebase grows faster than any human can audit. Determinism is the only thing that scales with that."
+      ]
+    },
+    {
+      "type": "heading",
+      "index": "03",
+      "title": "The loop."
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Our tools all assume the same shape. An agent does work. A gate runs over the result. Findings come out as structured JSON: rule, file, line, severity, fix hint. The agent reads the findings. The agent fixes the problem. The gate runs again. Repeat until exit code zero."
+      ]
+    },
+    {
+      "type": "loop",
+      "items": [
+        {
+          "index": "01",
+          "title": "agent works",
+          "body": "It writes, edits, refactors. Whatever it was told to do."
+        },
+        {
+          "index": "02",
+          "title": "gate runs",
+          "body": "A deterministic check scans the diff. Microseconds per token."
+        },
+        {
+          "index": "03",
+          "title": "issues reported",
+          "body": "Structured JSON. File, line, rule, severity, hint."
+        },
+        {
+          "index": "04",
+          "title": "agent fixes",
+          "body": "Loop the findings back into the agent. Run again."
+        },
+        {
+          "index": "05",
+          "title": "exit 0 or human",
+          "body": "Either the gate passes, or a human steps in. No middle ground."
+        }
+      ]
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "The agent never grades itself. The agent never grades another agent. The gate is the contract, and the gate is a small piece of code you can read in an afternoon. No model in the loop."
+      ]
+    },
+    {
+      "type": "heading",
+      "index": "04",
+      "title": "What this isn't."
+    },
+    {
+      "type": "paragraphs",
+      "paragraphs": [
+        "Agent-based review still helps. We don't claim otherwise. We use it ourselves - for taste, for nuance, for the kinds of problems no rule can encode. What we no longer do is let the agent review be the last line of defence.",
+        "We don't believe in smart review tools. We believe in dumb, fast, predictable ones - run a million times, audited line by line, the same verdict every time."
+      ]
+    }
+  ],
+  "end": {
+    "eyebrow": "what we ship",
+    "title": "Three gates. One philosophy.",
+    "mutedTitle": "Read the source.",
+    "tools": [
+      {
+        "name": "slopless",
+        "body": "deterministic textlint rules for catching prose slop in markdown.",
+        "url": "https://github.com/agent-quality-controls/slopless"
+      },
+      {
+        "name": "guardrail3",
+        "body": "composable code guardrails for rust and typescript projects.",
+        "url": "https://github.com/agent-quality-controls/guardrail3"
+      },
+      {
+        "name": "fixture3",
+        "body": "fixture-based approval testing cli for agent-managed codebases.",
+        "url": "https://github.com/agent-quality-controls/fixture3"
+      }
+    ],
+    "homeCta": {
+      "href": "/",
+      "label": "back home"
+    },
+    "githubCta": {
+      "href": "https://github.com/agent-quality-controls",
+      "label": "github org"
+    }
+  },
+  "footer": {
+    "body": "Deterministic controls for agent output. Less slop. More signal.",
+    "columns": [
+      {
+        "heading": "tools",
+        "links": [
+          {
+            "href": "https://github.com/agent-quality-controls/slopless",
+            "label": "slopless"
+          },
+          {
+            "href": "https://github.com/agent-quality-controls/guardrail3",
+            "label": "guardrail3"
+          },
+          {
+            "href": "https://github.com/agent-quality-controls/fixture3",
+            "label": "fixture3"
+          }
+        ]
+      },
+      {
+        "heading": "site",
+        "links": [
+          {
+            "href": "/",
+            "label": "home"
+          },
+          {
+            "href": "/manifesto/",
+            "label": "manifesto"
+          }
+        ]
+      },
+      {
+        "heading": "community",
+        "links": [
+          {
+            "href": "https://github.com/agent-quality-controls",
+            "label": "github org"
+          },
+          {
+            "href": "https://github.com/agent-quality-controls",
+            "label": "issues"
+          }
+        ]
+      }
+    ],
+    "legal": "MIT - no telemetry - no cookies - no llm in the loop",
+    "copyright": "agent-qc 2026"
+  }
+}

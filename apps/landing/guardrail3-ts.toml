@@ -1,0 +1,71 @@
+[astro]
+profile = "strict-static-content"
+
+[astro.routes]
+content = ["src/pages/**/*.astro"]
+non_content = []
+endpoints = ["src/pages/**/*.ts"]
+
+[astro.content]
+root = "content"
+adapters = ["src/content"]
+
+[astro.mdx]
+component_maps = []
+
+[astro.seo]
+metadata_helpers = ["src/seo/metadata.ts"]
+json_ld_helpers = ["src/seo/json-ld.ts", "src/seo/JsonLd.astro"]
+
+[astro.i18n]
+locales = ["en"]
+default_locale = "en"
+require_locale_prefix_for_content_routes = true
+public_source_globs = [
+  "src/content/**/*.{ts,tsx}",
+  "src/content-schema/**/*.{ts,tsx}",
+  "src/diagnostics/**/*.{ts,tsx}",
+  "src/lib/**/*.{ts,tsx}",
+  "src/pages/**/*.{astro,ts,tsx}",
+  "src/seo/**/*.{astro,ts,tsx}",
+  "src/ui/**/*.{astro,ts,tsx}",
+]
+helper_source_globs = []
+content_route_prefixes = ["/manifesto"]
+allowed_unprefixed_routes = ["/", "/manifesto/"]
+approved_internal_link_helpers = ["localePath"]
+checked_internal_link_helpers = ["localePath"]
+approved_localized_link_components = ["LocalizedLink"]
+approved_date_format_helpers = ["formatLocalizedDate"]
+approved_number_format_helpers = ["formatLocalizedNumber"]
+
+[astro.media]
+favicon = "/favicon.ico"
+app_icons = ["/apple-touch-icon.png"]
+default_social_image = "/og/default.png"
+allow_svg_icons = false
+public_source_globs = [
+  "src/content/**/*.{ts,tsx}",
+  "src/content-schema/**/*.{ts,tsx}",
+  "src/diagnostics/**/*.{ts,tsx}",
+  "src/lib/**/*.{ts,tsx}",
+  "src/pages/**/*.{astro,ts,tsx}",
+  "src/seo/**/*.{astro,ts,tsx}",
+  "src/ui/**/*.{astro,ts,tsx}",
+]
+media_helper_modules = ["src/lib/media-assets"]
+approved_media_helpers = ["logoImagePath", "logoImageUrl", "metadataImageUrl", "publicMediaUrl"]
+content_image_components = ["ArticleImage"]
+content_image_key_props = ["imageKey"]
+banned_image_source_props = ["src"]
+banned_image_alt_props = ["alt"]
+allowed_public_image_paths = ["/apple-touch-icon.png", "/favicon.ico", "/favicon-16.png", "/favicon-32.png", "/logo-aqc.png", "/og/default.png"]
+checked_image_extensions = [".ico", ".png", ".jpg", ".jpeg", ".webp", ".svg"]
+metadata_image_property_names = ["imageHref"]
+
+[astro.state]
+forbidden = [".next/**", ".velite/**", ".contentlayer/**"]
+
+[style]
+source_globs = ["src/**/*.astro", "src/**/*.ts", "src/**/*.tsx"]
+stylelint_css_globs = ["src/**/*.css"]

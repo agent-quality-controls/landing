@@ -1,0 +1,8 @@
+# agent-qc.com
+
+Deterministic controls for agent output. Less slop, more signal.
+
+## Main pages
+
+- [Homepage](https://agent-qc.com/)
+- [Manifesto](https://agent-qc.com/manifesto/)

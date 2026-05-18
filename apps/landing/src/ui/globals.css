@@ -1,0 +1,13 @@
+@import "@project/ui/globals.css";
+
+@source "../../src/**/*.{ts,tsx,astro}";
+
+@layer components {
+  .article-body p {
+    @apply my-4 font-sans text-body text-ink-2;
+  }
+
+  .article-body p:first-of-type {
+    @apply text-lead text-ink;
+  }
+}

@@ -1,0 +1,651 @@
+{
+  "$schema": "https://unpkg.com/syncpack@14.3.0/schema.json",
+  "customTypes": {
+    "optional": {
+      "path": "/optionalDependencies",
+      "strategy": "versionsByName"
+    }
+  },
+  "source": [
+    "package.json"
+  ],
+  "versionGroups": [
+    {
+      "label": "Ban next",
+      "dependencies": [
+        "next"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban velite",
+      "dependencies": [
+        "velite"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban @astrojs/node",
+      "dependencies": [
+        "@astrojs/node"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban eslint-plugin-astro-pipeline",
+      "dependencies": [
+        "eslint-plugin-astro-pipeline"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban @codemint/astro-meta",
+      "dependencies": [
+        "@codemint/astro-meta"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban astro-seo-meta",
+      "dependencies": [
+        "astro-seo-meta"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban astro-seo-schema",
+      "dependencies": [
+        "astro-seo-schema"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban astro-seo",
+      "dependencies": [
+        "astro-seo"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban contentlayer",
+      "dependencies": [
+        "contentlayer"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban g3ts-astro-sitemap-checks",
+      "dependencies": [
+        "g3ts-astro-sitemap-checks"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban g3ts-astro-robots-checks",
+      "dependencies": [
+        "g3ts-astro-robots-checks"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban g3ts-astro-llms-checks",
+      "dependencies": [
+        "g3ts-astro-llms-checks"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban g3ts-astro-llms",
+      "dependencies": [
+        "g3ts-astro-llms"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban next-contentlayer",
+      "dependencies": [
+        "next-contentlayer"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban @contentlayer/core",
+      "dependencies": [
+        "@contentlayer/core"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Ban @contentlayer/source-files",
+      "dependencies": [
+        "@contentlayer/source-files"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "optional",
+        "peer"
+      ],
+      "isBanned": true
+    },
+    {
+      "label": "Pin astro",
+      "dependencies": [
+        "astro"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "6.1.9"
+    },
+    {
+      "label": "Pin @astrojs/react",
+      "dependencies": [
+        "@astrojs/react"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "5.0.4"
+    },
+    {
+      "label": "Pin @astrojs/mdx",
+      "dependencies": [
+        "@astrojs/mdx"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "5.0.4"
+    },
+    {
+      "label": "Pin @astrojs/check",
+      "dependencies": [
+        "@astrojs/check"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.9.8"
+    },
+    {
+      "label": "Pin @astrojs/sitemap",
+      "dependencies": [
+        "@astrojs/sitemap"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "3.7.2"
+    },
+    {
+      "label": "Pin astro-robots",
+      "dependencies": [
+        "astro-robots"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "2.3.1"
+    },
+    {
+      "label": "Pin @nuasite/checks",
+      "dependencies": [
+        "@nuasite/checks"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.18.0"
+    },
+    {
+      "label": "Pin g3ts-astro-nuasite-checks",
+      "dependencies": [
+        "g3ts-astro-nuasite-checks"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.2"
+    },
+    {
+      "label": "Pin g3ts-astro-sitemap-auditor",
+      "dependencies": [
+        "g3ts-astro-sitemap-auditor"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.5"
+    },
+    {
+      "label": "Pin g3ts-astro-robots-auditor",
+      "dependencies": [
+        "g3ts-astro-robots-auditor"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.4"
+    },
+    {
+      "label": "Pin g3ts-astro-llms-auditor",
+      "dependencies": [
+        "g3ts-astro-llms-auditor"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.5"
+    },
+    {
+      "label": "Pin g3ts-astro-llms-generator",
+      "dependencies": [
+        "g3ts-astro-llms-generator"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.2"
+    },
+    {
+      "label": "Pin @eslint-community/eslint-plugin-eslint-comments",
+      "dependencies": [
+        "@eslint-community/eslint-plugin-eslint-comments"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "4.7.1"
+    },
+    {
+      "label": "Pin schema-dts",
+      "dependencies": [
+        "schema-dts"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "2.0.0"
+    },
+    {
+      "label": "Pin react",
+      "dependencies": [
+        "react"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "19.2.5"
+    },
+    {
+      "label": "Pin react-dom",
+      "dependencies": [
+        "react-dom"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "19.2.5"
+    },
+    {
+      "label": "Pin @types/react",
+      "dependencies": [
+        "@types/react"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "19.2.14"
+    },
+    {
+      "label": "Pin @types/react-dom",
+      "dependencies": [
+        "@types/react-dom"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "19.2.3"
+    },
+    {
+      "label": "Pin typescript",
+      "dependencies": [
+        "typescript"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "5.9.3"
+    },
+    {
+      "label": "Pin eslint-plugin-astro",
+      "dependencies": [
+        "eslint-plugin-astro"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "1.7.0"
+    },
+    {
+      "label": "Pin g3ts-eslint-plugin-astro-pipeline",
+      "dependencies": [
+        "g3ts-eslint-plugin-astro-pipeline"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.8"
+    },
+    {
+      "label": "Pin g3ts-eslint-plugin-astro-i18n-policy",
+      "dependencies": [
+        "g3ts-eslint-plugin-astro-i18n-policy"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.2"
+    },
+    {
+      "label": "Pin g3ts-eslint-plugin-astro-media-policy",
+      "dependencies": [
+        "g3ts-eslint-plugin-astro-media-policy"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.10"
+    },
+    {
+      "label": "Pin g3ts-astro-media-assets",
+      "dependencies": [
+        "g3ts-astro-media-assets"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.2"
+    },
+    {
+      "label": "Pin eslint-plugin-i18next",
+      "dependencies": [
+        "eslint-plugin-i18next"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "6.1.4"
+    },
+    {
+      "label": "Pin eslint-plugin-mdx",
+      "dependencies": [
+        "eslint-plugin-mdx"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "3.7.0"
+    },
+    {
+      "label": "Pin tailwindcss",
+      "dependencies": [
+        "tailwindcss"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "4.2.4"
+    },
+    {
+      "label": "Pin @tailwindcss/postcss",
+      "dependencies": [
+        "@tailwindcss/postcss"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "4.2.4"
+    },
+    {
+      "label": "Pin class-variance-authority",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.7.1"
+    },
+    {
+      "label": "Pin clsx",
+      "dependencies": [
+        "clsx"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "2.1.1"
+    },
+    {
+      "label": "Pin tailwind-merge",
+      "dependencies": [
+        "tailwind-merge"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "3.5.0"
+    },
+    {
+      "label": "Pin lucide-react",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.577.0"
+    },
+    {
+      "label": "Pin zod",
+      "dependencies": [
+        "zod"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "4.3.6"
+    },
+    {
+      "label": "Pin @types/node",
+      "dependencies": [
+        "@types/node"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "25.6.0"
+    },
+    {
+      "label": "Pin g3ts-eslint-plugin-style-policy",
+      "dependencies": [
+        "g3ts-eslint-plugin-style-policy"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "0.1.3"
+    },
+    {
+      "label": "Pin prettier",
+      "dependencies": [
+        "prettier"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "3.8.3"
+    },
+    {
+      "label": "Pin cspell",
+      "dependencies": [
+        "cspell"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "10.0.0"
+    },
+    {
+      "label": "Pin type-coverage",
+      "dependencies": [
+        "type-coverage"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "2.29.7"
+    },
+    {
+      "label": "Pin syncpack",
+      "dependencies": [
+        "syncpack"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev"
+      ],
+      "pinVersion": "14.3.0"
+    }
+  ]
+}

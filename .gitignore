@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+.astro/
+dist/
+out/
+*.tsbuildinfo
+.screenshots/
+
+# Environment & secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Claude Code
+.claude/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# Drizzle — meta/ is tracked (needed by drizzle-kit)
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Rust
+/Cargo.lock
+.cargo-target/
+apps/backend/target/
+target/
+
+# Velite generated output
+.velite/
+
+# Generated crawler output and scratch trees
+crawls/
+reports/current/
+reports/old/
+apps/crawler/tmp/
+apps/crawler/apps/
+blog/articles/crm-keyword-strategy-case-study/data/paid-dataforseo/raw/
+
+# Accidental nested worktrees
+apps/web-old/

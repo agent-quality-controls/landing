@@ -1,0 +1,246 @@
+{
+  "page": "home",
+  "metadata": {
+    "title": "agent-qc.com - deterministic controls for agent output",
+    "description": "A toolchain of deterministic, code-based quality gates for AI agents. No model in the loop. Less slop, more signal."
+  },
+  "brandName": "agent-qc.com",
+  "githubUrl": "https://github.com/agent-quality-controls",
+  "githubLabel": "github",
+  "navLinks": [
+    {
+      "href": "/",
+      "label": "home"
+    },
+    {
+      "href": "/manifesto/",
+      "label": "manifesto"
+    },
+    {
+      "href": "#tools",
+      "label": "tools"
+    }
+  ],
+  "hero": {
+    "badge": "agent-quality-controls - since 2026",
+    "title": "Agents ship faster than you can",
+    "accent": "read",
+    "body": "They solve real problems - and accumulate flaws at a speed humans can no longer follow. Agents grading other agents tend to inherit the same blind spots, especially on large codebases. We ship the opposite: deterministic, code-based gates that can't be talked around.",
+    "primaryCta": {
+      "href": "/manifesto/",
+      "label": "read the manifesto"
+    },
+    "secondaryCta": {
+      "href": "#tools",
+      "label": "three tools"
+    },
+    "githubCta": {
+      "href": "https://github.com/agent-quality-controls",
+      "label": "github.com/agent-quality-controls"
+    },
+    "metrics": [
+      {
+        "value": "3",
+        "label": "tools shipping"
+      },
+      {
+        "value": "0",
+        "label": "models in the loop"
+      },
+      {
+        "value": "2",
+        "label": "languages: rs, ts"
+      },
+      {
+        "value": "MIT",
+        "label": "license"
+      }
+    ]
+  },
+  "problem": {
+    "eyebrow": "01 - the problem",
+    "title": "Speed is the feature.",
+    "mutedTitle": "Speed is also the bug.",
+    "points": [
+      {
+        "index": "01",
+        "title": "Agents outrun review.",
+        "body": "Output arrives in seconds. A human reading carefully takes minutes per file. The gap compounds across a sprint."
+      },
+      {
+        "index": "02",
+        "title": "Errors compound silently.",
+        "body": "Each generation inherits the last. Subtle defects survive because nothing structural is forcing them to surface."
+      },
+      {
+        "index": "03",
+        "title": "Agents are bad referees.",
+        "body": "An LLM grading another LLM shares its blind spots. Once the codebase exceeds context, the reviewer is guessing."
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "02 - the approach",
+    "title": "Deterministic gates.",
+    "mutedTitle": "No model in the loop.",
+    "body": "Code-based controls aren't smarter than an agent. They don't need to be. They're rules, written once, run forever, with the same result every time.",
+    "proofs": [
+      {
+        "label": "can't be circumvented",
+        "body": "Rules compile to code. The agent can't argue with them, can't flatter them, can't convince them it's fine this time. The gate is the contract."
+      },
+      {
+        "label": "scales infinitely",
+        "body": "One token or ten million tokens - the same check runs at the same speed. No quadratic context window, no per-call cost, no rate limit."
+      },
+      {
+        "label": "context-independent",
+        "body": "Determinism doesn't care what's in the repo. The check only sees what it's pointed at. Big codebase, small codebase, same verdict shape."
+      }
+    ]
+  },
+  "loop": {
+    "eyebrow": "03 - the loop",
+    "title": "Work. Gate. Report. Loop.",
+    "body": "The agent does the task. A gate runs. Issues report out as structured findings. The agent loops back and fixes them - until the gate exits clean.",
+    "loopLabel": "loop",
+    "steps": [
+      {
+        "index": "01",
+        "title": "agent works",
+        "body": "writes code, writes prose, refactors, edits.",
+        "lines": ["$ agent run task.md", "  drafting..."],
+        "tone": "info"
+      },
+      {
+        "index": "02",
+        "title": "gate runs",
+        "body": "deterministic checks scan the diff. Microseconds per token.",
+        "lines": ["$ guardrail3 check .", "  scanning 142 files"],
+        "tone": "ok"
+      },
+      {
+        "index": "03",
+        "title": "issues reported",
+        "body": "structured JSON. File, line, rule, severity. Nothing fuzzy.",
+        "lines": ["FAIL hedge.just README:8:4", "FAIL arch.cycle user::auth"],
+        "tone": "fail"
+      },
+      {
+        "index": "04",
+        "title": "agent fixes",
+        "body": "loop until the gate exits 0. Or the human steps in.",
+        "lines": ["$ agent fix --json findings.json", "  retrying..."],
+        "tone": "info"
+      }
+    ],
+    "note": "loop until exit 0. no agent grading another agent. no token cost per pass. the gate is the contract."
+  },
+  "tools": {
+    "eyebrow": "04 - the tools",
+    "title": "Three gates.",
+    "mutedTitle": "One philosophy.",
+    "ownerLabel": "agent-quality-controls",
+    "cta": {
+      "href": "https://github.com/agent-quality-controls",
+      "label": "full org on github"
+    },
+    "items": [
+      {
+        "name": "slopless",
+        "family": "prose",
+        "ecosystem": "npm - node",
+        "install": "npm install -D slopless",
+        "tagline": "Deterministic textlint rules for catching prose slop in Markdown.",
+        "body": "50+ rules across hedge words, AI tells, cliches, banned tokens, sentence structure. Reads stdin or a glob. Emits structured JSON findings. Exits 0/1/2. No LLM.",
+        "bullets": [
+          "50+ deterministic rules in 7 families",
+          "exit 0 / 1 / 2: clean / findings / failure",
+          "inline textlint-disable blocks"
+        ],
+        "ctaLabel": "view on github",
+        "url": "https://github.com/agent-quality-controls/slopless"
+      },
+      {
+        "name": "guardrail3",
+        "family": "code",
+        "ecosystem": "cargo - rust",
+        "install": "cargo install guardrail3",
+        "tagline": "Composable code guardrails for Rust and TypeScript projects.",
+        "body": "Banned-by-default architecture checks: dependency allowlists, topology rules, apparch, source scans, release readiness, test quality. Bootstraps from a profile. Self-validates.",
+        "bullets": [
+          "banned-by-default, profile-driven",
+          "rust + typescript projects",
+          "self-validates on every run"
+        ],
+        "ctaLabel": "view on github",
+        "url": "https://github.com/agent-quality-controls/guardrail3"
+      },
+      {
+        "name": "fixture3",
+        "family": "tests",
+        "ecosystem": "cargo - rust",
+        "install": "cargo binstall fixture3",
+        "tagline": "Fixture-based approval testing CLI for agent-managed codebases.",
+        "body": "Fixtures, suites, features, tags. Approved vs received output. Fail-closed by default. DDMin reduction for shrinking failures. JSON output on every command, exit codes you can pipe into an agent.",
+        "bullets": [
+          "fail-closed approval testing",
+          "DDMin failure reduction",
+          "JSON output, agent-readable"
+        ],
+        "ctaLabel": "view on github",
+        "url": "https://github.com/agent-quality-controls/fixture3"
+      }
+    ]
+  },
+  "footer": {
+    "body": "Deterministic controls for agent output. Less slop. More signal.",
+    "columns": [
+      {
+        "heading": "tools",
+        "links": [
+          {
+            "href": "https://github.com/agent-quality-controls/slopless",
+            "label": "slopless"
+          },
+          {
+            "href": "https://github.com/agent-quality-controls/guardrail3",
+            "label": "guardrail3"
+          },
+          {
+            "href": "https://github.com/agent-quality-controls/fixture3",
+            "label": "fixture3"
+          }
+        ]
+      },
+      {
+        "heading": "site",
+        "links": [
+          {
+            "href": "/",
+            "label": "home"
+          },
+          {
+            "href": "/manifesto/",
+            "label": "manifesto"
+          }
+        ]
+      },
+      {
+        "heading": "community",
+        "links": [
+          {
+            "href": "https://github.com/agent-quality-controls",
+            "label": "github org"
+          },
+          {
+            "href": "https://github.com/agent-quality-controls",
+            "label": "issues"
+          }
+        ]
+      }
+    ],
+    "legal": "MIT - no telemetry - no cookies - no llm in the loop",
+    "copyright": "agent-qc 2026"
+  }
+}

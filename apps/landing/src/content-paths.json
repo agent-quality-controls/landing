@@ -1,0 +1,14 @@
+{
+  "base": "./content",
+  "extensions": {
+    "json": ".json",
+    "mdx": ".mdx"
+  },
+  "landing": {
+    "collection": "landing",
+    "entryPrefix": "landing/",
+    "homepageId": "home",
+    "manifestoId": "manifesto",
+    "pattern": "landing/*.json"
+  }
+}

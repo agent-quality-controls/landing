@@ -1,0 +1,16 @@
+---
+import { getManifesto } from "../content/landing-pages";
+import { buildManifestoJsonLd } from "../seo/json-ld";
+import { buildManifestoMetadata } from "../seo/metadata";
+import BaseLayout from "../ui/BaseLayout.astro";
+import { ManifestoPage } from "../ui/manifesto/ManifestoPage";
+
+const manifesto = await getManifesto();
+const siteUrl = new URL(Astro.site ?? Astro.url.origin);
+const metadata = buildManifestoMetadata(manifesto, siteUrl, Astro.url);
+const jsonLd = buildManifestoJsonLd(manifesto, siteUrl, Astro.url);
+---
+
+<BaseLayout metadata={metadata} jsonLd={jsonLd}>
+  <ManifestoPage content={manifesto} currentPath={Astro.url.pathname} />
+</BaseLayout>

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "agentqc",
+    "astro",
+    "clsx",
+    "cspell",
+    "esnext",
+    "frontmatter",
+    "binstall",
+    "defence",
+    "lucide",
+    "monorepo",
+    "noEmit",
+    "nuasite",
+    "pnpm",
+    "postcss",
+    "prettierignore",
+    "radix",
+    "shadcn",
+    "stylelint",
+    "tailwindcss",
+    "tsconfig",
+    "tseslint",
+    "typecov",
+    "unrs",
+    "zod"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    ".astro",
+    "dist",
+    "pnpm-lock.yaml",
+    "*.min.js",
+    "*.min.css",
+    ".plans",
+    ".worklogs",
+    "*.log"
+  ],
+  "ignoreRegExpList": [
+    "var\\(--[^)]+\\)",
+    "#[0-9a-fA-F]{3,8}\\b",
+    "https?://\\S+"
+  ]
+}

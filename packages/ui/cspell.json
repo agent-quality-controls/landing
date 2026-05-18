@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "import": ["../../cspell.json"],
+  "words": ["cmdk", "typecov"],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".next",
+    "coverage",
+    "pnpm-lock.yaml"
+  ]
+}

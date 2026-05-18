@@ -1,0 +1,69 @@
+---
+import JsonLd from "../seo/JsonLd.astro";
+import type { HomepageJsonLd, ManifestoJsonLd } from "../seo/json-ld";
+import type { PublicRouteMetadata } from "../seo/metadata";
+import {
+  appleTouchIconPath,
+  favicon16PngPath,
+  favicon32PngPath,
+  faviconIcoPath,
+} from "../lib/media-assets";
+
+interface Props {
+  jsonLd: HomepageJsonLd | ManifestoJsonLd;
+  metadata: PublicRouteMetadata;
+}
+
+const { jsonLd, metadata } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+    <link rel="canonical" href={metadata.canonicalHref} />
+    <link rel="icon" href={faviconIcoPath} sizes="any" />
+    <link rel="icon" href={favicon32PngPath} type="image/png" sizes="32x32" />
+    <link rel="icon" href={favicon16PngPath} type="image/png" sizes="16x16" />
+    <link rel="shortcut icon" href={faviconIcoPath} />
+    <link rel="apple-touch-icon" href={appleTouchIconPath} sizes="180x180" />
+    <meta property="og:title" content={metadata.title} />
+    <meta property="og:description" content={metadata.description} />
+    <meta property="og:type" content={metadata.openGraphType} />
+    <meta property="og:url" content={metadata.canonicalHref} />
+    <meta property="og:site_name" content={metadata.siteName} />
+    <meta property="og:image" content={metadata.imageHref} />
+    <meta property="og:image:type" content={metadata.imageMimeType} />
+    <meta property="og:image:width" content={metadata.imageWidth} />
+    <meta property="og:image:height" content={metadata.imageHeight} />
+    <meta property="og:image:alt" content={metadata.imageAlt} />
+    <meta name="twitter:card" content={metadata.twitterCard} />
+    <meta name="twitter:title" content={metadata.title} />
+    <meta name="twitter:description" content={metadata.description} />
+    <meta name="twitter:image" content={metadata.imageHref} />
+    <meta name="twitter:image:alt" content={metadata.imageAlt} />
+    <JsonLd data={jsonLd} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background font-mono text-foreground antialiased">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import "./globals.css";
+
+  :root {
+    --font-sans: "Inter";
+    --font-mono: "JetBrains Mono";
+    --font-serif: "Anta";
+  }
+</style>

@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "import": ["../../cspell.json"],
+  "words": [
+    "Anta",
+    "apparch",
+    "artefact",
+    "callees",
+    "canonicalurl",
+    "cliches",
+    "contentlayer",
+    "fetchcontent",
+    "fontsource",
+    "getentrybyslug",
+    "guardrail",
+    "guardrails",
+    "hrefs",
+    "lede",
+    "lightningcss",
+    "llms",
+    "nuasite",
+    "pullquote",
+    "slopless",
+    "summarises",
+    "textlint",
+    "typecov",
+    "unlocalized",
+    "velite",
+    "webp"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".next",
+    "coverage",
+    "pnpm-lock.yaml"
+  ]
+}
