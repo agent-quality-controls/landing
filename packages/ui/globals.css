@@ -8,10 +8,10 @@
   --background: #0a0a0a;
   --foreground: #f5f5f0;
   --ink: #f5f5f0;
-  --ink-2: #a3a3a3;
-  --ink-3: #737373;
-  --ink-4: #404040;
-  --muted-foreground: #737373;
+  --ink-2: #d4d4d4;
+  --ink-3: #adadad;
+  --ink-4: #404040; /* Decorative only: hairlines and separators, not readable text. */
+  --muted-foreground: #adadad;
   --line: #262626;
   --border: #262626;
   --line-2: #1a1a1a;
